@@ -1,13 +1,65 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #12232E;
+
+    
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.modes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #12232E;
+    width: 100%;
+    height: 100px;
+    box-shadow: 1px 2px 6px #12232E;
+
+}
+
+.mbtn1, .mbtn2,.mbtn3{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    height: 25px;
+    font-size: 20px;
+    display: flex;
+    margin: 0 60px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 1s ease; 
+}
+.mbtn1:hover,.mbtn2:hover,.mbtn3:hover{
+    transform: scale(1.1)  rotate(1deg);
+}
+.mbtn1{
+    box-shadow: 1px 1px 8px black;
+    background-color: white;
+}
+.mbtn2{
+    background-color: black;
+    color: white;
+}
+.mbtn3{
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    outline: none;
+}
+@media  screen and (max-width: 768px) {
+    .modes{
+        width: 120%;
+    }
+    .mbtn1, .mbtn2,.mbtn3{
+        margin: 0 25px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
 }
